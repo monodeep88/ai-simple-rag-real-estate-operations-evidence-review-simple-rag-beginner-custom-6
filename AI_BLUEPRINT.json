@@ -1,0 +1,134 @@
+{
+  "mode": "ai",
+  "project_title": "Real Estate Operations Evidence Review Simple RAG",
+  "short_description": "A beginner-friendly AI-powered RAG (Red, Amber, Green) system for real estate operations evidence review",
+  "domain_summary": "The system will review real estate operations evidence, categorizing it as Red (critical issues), Amber (potential issues), or Green (no issues).",
+  "user_persona": "Real Estate Operations Manager: Responsible for overseeing real estate operations and ensuring compliance with regulations.",
+  "architecture_notes": [
+    "The system will use a microservices-based architecture to ensure scalability and maintainability."
+  ],
+  "backend_modules": [
+    "Evidence Review Service: Reviews evidence and returns a list of issues",
+    "RAG Categorization Service: Categorizes issues as Red, Amber, or Green",
+    "Compliance Checker Service: Checks compliance with regulations"
+  ],
+  "frontend_features": [
+    "Evidence Upload: Allows users to upload evidence",
+    "Issue List: Displays a list of issues",
+    "RAG Categorization: Displays the RAG categorization of issues"
+  ],
+  "data_sources": [
+    "Real Estate Operations Database: Stores evidence and issue data"
+  ],
+  "testing_strategy": [
+    "Unit testing and integration testing using Pytest"
+  ],
+  "starter_questions": [
+    "What is the purpose of the system?",
+    "What are the key features of the system?",
+    "How will the system be deployed?"
+  ],
+  "workflow_steps": [
+    "Evidence Upload: User uploads evidence",
+    "Issue Detection: System detects issues",
+    "RAG Categorization: System categorizes issues as Red, Amber, or Green"
+  ],
+  "business_rules": [
+    "Compliance Checker: Checks compliance with regulations"
+  ],
+  "sample_documents": [
+    {
+      "filename": "evidence.pdf",
+      "content": "This is a sample evidence document."
+    },
+    {
+      "filename": "issue_list.csv",
+      "content": "issue1,issue2,issue3"
+    }
+  ],
+  "tool_catalog": [
+    {
+      "name": "FastAPI",
+      "description": "A modern, fast (high-performance), web framework for building APIs with Python 3.7+ based on standard Python type hints."
+    },
+    {
+      "name": "React",
+      "description": "A JavaScript library for building user interfaces."
+    }
+  ],
+  "agent_plan": [
+    {
+      "name": "Architecture Agent",
+      "role": "Define app boundaries, data flow, runtime stack, and integration points.",
+      "outputs": [
+        "The system will use a microservices-based architecture to ensure scalability and maintainability."
+      ]
+    },
+    {
+      "name": "Backend Agent",
+      "role": "Design FastAPI modules, service contracts, validation, and error handling.",
+      "outputs": [
+        "Evidence Review Service: Reviews evidence and returns a list of issues",
+        "RAG Categorization Service: Categorizes issues as Red, Amber, or Green",
+        "Compliance Checker Service: Checks compliance with regulations"
+      ]
+    },
+    {
+      "name": "Frontend Agent",
+      "role": "Design React screens, state flow, controls, and user feedback states.",
+      "outputs": [
+        "Evidence Upload: Allows users to upload evidence",
+        "Issue List: Displays a list of issues",
+        "RAG Categorization: Displays the RAG categorization of issues"
+      ]
+    },
+    {
+      "name": "Database Agent",
+      "role": "Design persistence models, sample data, indexes, and audit records.",
+      "outputs": [
+        "Run history",
+        "Source document metadata",
+        "Generated workflow audit records"
+      ]
+    },
+    {
+      "name": "Testing Agent",
+      "role": "Define contract tests, smoke tests, and generated project validation.",
+      "outputs": [
+        "Unit testing and integration testing using Pytest"
+      ]
+    },
+    {
+      "name": "DevOps Agent",
+      "role": "Define environment variables, Docker workflow, and repository packaging.",
+      "outputs": [
+        "Docker-ready project",
+        "Environment sample file",
+        "GitHub repository upload"
+      ]
+    },
+    {
+      "name": "Reviewer Agent",
+      "role": "Review the generated plan for completeness, security, and portfolio quality.",
+      "outputs": [
+        "Evidence Upload: User uploads evidence",
+        "Issue Detection: System detects issues",
+        "RAG Categorization: System categorizes issues as Red, Amber, or Green"
+      ]
+    }
+  ],
+  "model_provider": "groq",
+  "model_name": "llama-3.1-8b-instant",
+  "fallback_reason": "OpenAI limit reached. Automatically switched to Groq.",
+  "architecture": "Real Estate Policy Assistant",
+  "architecture_template_id": 41,
+  "architecture_template_path": "templates/simple-rag/real-estate-policy-assistant",
+  "architecture_description": "Real Estate Policy Assistant for lease and property policy lookup.",
+  "validation_pipeline": [
+    "pytest",
+    "npm install",
+    "npm run build",
+    "docker compose config",
+    "docker compose build"
+  ]
+}
